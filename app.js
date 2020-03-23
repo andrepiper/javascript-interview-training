@@ -1,11 +1,8 @@
-const FirstRecurringCharacter = require('./questions/first-recurring-character')
-const LongestPalindromicString = require('./questions/longest-palindromic-string')
+const Questions = require('./questions');
+
+let firstRecurringCharacter = new Questions.FirstRecurringCharacter();
+console.log(firstRecurringCharacter.answer("").response);
 
 
-
-let firstRecurringCharacter = new FirstRecurringCharacter();
-console.log(firstRecurringCharacter.answer(""));
-
-
-let longestPalindromicString = new LongestPalindromicString();
-console.log(longestPalindromicString.answer("banana"));
+let longestPalindromicString = new Questions.LongestPalindromicString();
+console.log(longestPalindromicString.answer("banana").response);
