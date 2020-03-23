@@ -1,7 +1,7 @@
 const ResponseModel = require('../models/response-model')
 
 class FirstRecurringCharacter {
-    submit(){
+    answer(testCase){
         let responseModel = new ResponseModel();
         responseModel.setResponse("TEST");
         return responseModel;
