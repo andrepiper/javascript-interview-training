@@ -1,14 +1,19 @@
 class ResponseModel {
-    constructor(response) {
-        this.response = response;
+    constructor(answer, testCase) {
+        this.answer = answer;
+        this.testCase = testCase;
     }
 
     getResponse() {
-        return this.response;
+        return {
+            answer : this.answer,
+            testCase : this.testCase
+        };
     }
 
-    setResponse(value) {
-        this.response = value;
+    setResponse(answer, testCase) {
+        this.answer = answer;
+        this.testCase = testCase;
     }
 }
 
