@@ -33,7 +33,7 @@ class LongestPalindromicString
                 longest = temp
             }
         }
-        responseModel.setResponse(longest);
+        responseModel.setResponse(longest, testCase);
         return responseModel;
     }
 
