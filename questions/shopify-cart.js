@@ -53,9 +53,9 @@ class ShopifyCart {
         }
         return price;
     }
-    answer(testCase){
+    execute(testCase){
         let cart = [];
-        let responseModel = new ResponseModel();
+        let responseModel = new ResponseModel(testCase);
         for(let [productName, quantity] of testCase)
         {
             cart.push({
@@ -65,7 +65,7 @@ class ShopifyCart {
             });
         }
         let finalPrice = parseFloat(this.calculatePrice(cart));
-        responseModel.setResponse(finalPrice, testCase);
+        responseModel.setAnswer(finalPrice);
         return responseModel;
     }
 }
