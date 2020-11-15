@@ -1,17 +1,18 @@
 const Questions = require('./questions');
+const Algorithms  = require('./algorithms');
 
-let firstRecurringCharacter = new Questions.FirstRecurringCharacter();
-console.log(firstRecurringCharacter.answer([2,5,1,2,3,5,1,2,4]).getResponse());
-console.log(firstRecurringCharacter.answer([2,1,1,2,3,5,1,2,4]).getResponse());
-
-
-let longestPalindromicString = new Questions.LongestPalindromicString();
-console.log(longestPalindromicString.answer("banana").getResponse());
+console.log(new Algorithms.BubbleSort().execute([10,5,20,1,6,8,-1]).getAnswer());
 
 
-let shopifyCart = new Questions.ShopifyCart();
-console.log(shopifyCart.answer([["grapes",1],["apples",0],["peaches",1]]).getResponse());
-console.log(shopifyCart.answer([["grapes",2],["apples",4],["peaches",3]]).getResponse());
-console.log(shopifyCart.answer([["grapes",3],["apples",3],["peaches",2]]).getResponse());
-console.log(shopifyCart.answer([["grapes",4],["apples",2],["peaches",4]]).getResponse());
-console.log(shopifyCart.answer([["grapes",5],["apples",1],["peaches",5]]).getResponse());
+console.log(new Questions.FirstRecurringCharacter().execute([2,5,1,2,3,5,1,2,4]).getAnswer());
+console.log(new Questions.FirstRecurringCharacter().execute([2,1,1,2,3,5,1,2,4]).getAnswer());
+
+
+console.log(new Questions.LongestPalindromicString().execute("banana").getAnswer());
+
+
+console.log(new Questions.ShopifyCart().execute([["grapes",1],["apples",0],["peaches",1]]).getAnswer());
+console.log(new Questions.ShopifyCart().execute([["grapes",2],["apples",4],["peaches",3]]).getAnswer());
+console.log(new Questions.ShopifyCart().execute([["grapes",3],["apples",3],["peaches",2]]).getAnswer());
+console.log(new Questions.ShopifyCart().execute([["grapes",4],["apples",2],["peaches",4]]).getAnswer());
+console.log(new Questions.ShopifyCart().execute([["grapes",5],["apples",1],["peaches",5]]).getAnswer());

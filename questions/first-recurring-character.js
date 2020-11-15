@@ -1,11 +1,11 @@
 const ResponseModel = require('../models/response-model')
 
 class FirstRecurringCharacter {
-    answer(testCase){
-        let responseModel = new ResponseModel();
+    execute(testCase){
+        let responseModel = new ResponseModel(testCase);
         for (let i = 0; i < testCase.length; i++) {
             if (testCase.indexOf(testCase[i]) !== i) {
-                responseModel.setResponse(testCase[i], testCase);
+                responseModel.setAnswer(testCase[i]);
                 return responseModel;
             }
         }

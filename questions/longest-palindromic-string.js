@@ -16,8 +16,8 @@ const ResponseModel = require('../models/response-model')
 
 class LongestPalindromicString
 {
-    answer(testCase){
-        let responseModel = new ResponseModel();
+    execute(testCase){
+        let responseModel = new ResponseModel(testCase);
         if (testCase === undefined || testCase === null || testCase.length < 1) {
             responseModel.setResponse('');
             return responseModel;
@@ -33,7 +33,7 @@ class LongestPalindromicString
                 longest = temp
             }
         }
-        responseModel.setResponse(longest, testCase);
+        responseModel.setAnswer(longest);
         return responseModel;
     }
 
